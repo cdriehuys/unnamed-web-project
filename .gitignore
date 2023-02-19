@@ -1,5 +1,9 @@
 .venv/
 __pycache__/
+node_modules/
+
+# Theme CSS that is generated based on usage in templates.
+**/static/css/dist/
 
 *.pyc
 db.sqlite3

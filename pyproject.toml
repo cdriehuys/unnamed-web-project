@@ -10,6 +10,7 @@ packages = [{include = "unnamed_web_project"}]
 python = "^3.10"
 Django = "^4.1.7"
 psycopg2 = "^2.9.5"
+django-tailwind = "^3.5.0"
 
 
 [tool.poetry.group.dev.dependencies]

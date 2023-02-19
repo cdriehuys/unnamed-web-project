@@ -6,7 +6,7 @@ services:
 
       args:
         VARIANT: "3.10-bullseye"
-        NODE_VERSION: "none"
+        NODE_VERSION: "lts/*"
 
     environment:
       DB_NAME: postgres
