@@ -2,14 +2,12 @@
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.245.0/containers/python-3
 {
 	"name": "Python 3",
-
 	"dockerComposeFile": [
 		"../docker-compose.base.yml",
 		"./docker-compose.vscode.yml"
 	],
 	"service": "vscode",
 	"workspaceFolder": "/workspace",
-
 	// Configure tool-specific properties.
 	"customizations": {
 		// Configure properties specific to VS Code.
@@ -29,7 +27,6 @@
 				"python.linting.pydocstylePath": "/usr/local/py-utils/bin/pydocstyle",
 				"python.linting.pylintPath": "/workspace/.venv/bin/pylint"
 			},
-
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
 				"batisteo.vscode-django",
@@ -39,13 +36,11 @@
 			]
 		}
 	},
-
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
-
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "pip3 install --user -r requirements.txt",
-
+	"postCreateCommand": ".devcontainer/post-create-hook.sh",
 	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
 	"remoteUser": "vscode"
 }
