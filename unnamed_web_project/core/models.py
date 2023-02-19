@@ -13,10 +13,7 @@ class User(AbstractBaseUser):
         verbose_name=_("ID"),
     )
 
-    email = models.EmailField(
-        unique=True,
-        verbose_name=_("email")
-    )
+    email = models.EmailField(unique=True, verbose_name=_("email"))
 
     is_active = models.BooleanField(
         default=True,

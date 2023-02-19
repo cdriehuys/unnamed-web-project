@@ -13,8 +13,7 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name="User",
             fields=[
-                ("password", models.CharField(
-                    max_length=128, verbose_name="password")),
+                ("password", models.CharField(max_length=128, verbose_name="password")),
                 (
                     "last_login",
                     models.DateTimeField(
@@ -62,13 +61,11 @@ class Migration(migrations.Migration):
                 ),
                 (
                     "created_at",
-                    models.DateTimeField(
-                        auto_now_add=True, verbose_name="created at"),
+                    models.DateTimeField(auto_now_add=True, verbose_name="created at"),
                 ),
                 (
                     "updated_at",
-                    models.DateTimeField(
-                        auto_now=True, verbose_name="updated at"),
+                    models.DateTimeField(auto_now=True, verbose_name="updated at"),
                 ),
             ],
             options={
