@@ -1,0 +1,27 @@
+services:
+  vscode:
+    build:
+      context: .
+      dockerfile: .devcontainer/Dockerfile
+
+      args:
+        VARIANT: "3.10-bullseye"
+        NODE_VERSION: "none"
+
+    environment:
+      DB_NAME: postgres
+      DB_USER: postgres
+      DB_PASSWORD: password
+      DB_HOST: postgres
+      DB_PORT: "5432"
+
+      DEBUG_ENABLED: "true"
+
+    volumes:
+      # Mounts the project folder to '/workspace'. While this file is in
+      # .devcontainer, mounts are relative to the first file in the list, which
+      # is a level up.
+      - .:/workspace:cached
+
+    # Overrides default command so things don't shut down after the process ends.
+    command: /bin/sh -c "while sleep 1000; do :; done"
