@@ -1,2 +1,3 @@
-# template-python-django
-Template for Python projects using Django.
+# Unnamed Web Project
+
+The basics of a web app with no real purpose.

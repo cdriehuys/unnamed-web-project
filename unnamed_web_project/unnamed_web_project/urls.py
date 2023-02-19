@@ -1,4 +1,4 @@
-"""template_python_django URL Configuration
+"""unnamed_web_project URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.1/topics/http/urls/

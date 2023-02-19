@@ -1,10 +1,10 @@
 [tool.poetry]
-name = "template-python-django"
+name = "unnamed-web-project"
 version = "0.1.0"
 description = ""
-authors = ["Your Name <you@example.com>"]
+authors = ["Chathan Driehuys <chathan@driehuys.com>"]
 readme = "README.md"
-packages = [{include = "template_python_django"}]
+packages = [{include = "unnamed_web_project"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
