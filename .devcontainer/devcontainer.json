@@ -30,9 +30,10 @@
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
 				"batisteo.vscode-django",
+				"bradlc.vscode-tailwindcss",
 				"ms-python.python",
 				"ms-python.vscode-pylance",
-				"patbenatar.advanced-new-file"
+				"patbenatar.advanced-new-file",
 			]
 		}
 	},

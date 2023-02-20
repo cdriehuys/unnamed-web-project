@@ -1,4 +1,4 @@
-from django.contrib.auth.models import AbstractBaseUser
+from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 from uuid_extensions import uuid7
@@ -6,7 +6,7 @@ from uuid_extensions import uuid7
 from core import managers
 
 
-class User(AbstractBaseUser):
+class User(AbstractBaseUser, PermissionsMixin):
     id = models.UUIDField(
         default=uuid7,
         primary_key=True,

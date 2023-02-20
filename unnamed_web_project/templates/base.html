@@ -11,6 +11,16 @@
     </head>
 
     <body>
+        {% if messages %}
+            <div class="mb-4">
+            {% for message in messages %}
+                <div class="bg-blue-200 border-t border-b border-blue-800">
+                    <p class="p-2 mx-auto max-w-prose">{{ message }}</p>
+                </div>
+            {% endfor %}
+            </div>
+        {% endif %}
+
         {% block content %}{% endblock %}
     </body>
 </html>

@@ -12,6 +12,8 @@ Django = "^4.1.7"
 psycopg2 = "^2.9.5"
 django-tailwind = "^3.5.0"
 uuid7 = "^0.1.0"
+django-allauth = "^0.52.0"
+docutils = "^0.19"
 
 
 [tool.poetry.group.dev.dependencies]

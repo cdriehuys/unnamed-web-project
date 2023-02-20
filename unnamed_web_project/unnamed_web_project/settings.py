@@ -63,12 +63,17 @@ ALLOWED_HOSTS = get_env_list("ALLOWED_HOSTS")
 INSTALLED_APPS = [
     # Django apps
     "django.contrib.admin",
+    "django.contrib.admindocs",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django.forms",
     # Third party apps
+    "allauth",
+    "allauth.account",
+    "allauth.socialaccount",
     "django_browser_reload",
     "tailwind",
     # Custom apps
@@ -143,6 +148,9 @@ AUTH_PASSWORD_VALIDATORS = [
 
 AUTH_USER_MODEL = "core.User"
 
+LOGIN_URL = "account_login"
+
+
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
@@ -164,5 +172,34 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+# Email
+# https://docs.djangoproject.com/en/4.1/topics/email/#email-backends
+
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+
+
+# Forms
+
+FORM_RENDERER = "django.forms.renderers.TemplatesSetting"
+
+
+# Sites
+
+SITE_ID = 1
+
+
+# Allauth
+
+ACCOUNT_AUTHENTICATION_METHOD = "email"
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_EMAIL_VERIFICATION = "mandatory"
+ACCOUNT_USER_MODEL_EMAIL_FIELD = "email"
+ACCOUNT_USER_MODEL_USERNAME_FIELD = None
+ACCOUNT_USERNAME_REQUIRED = False
+
+
+# Tailwind Theming
 
 TAILWIND_APP_NAME = "theme"
