@@ -56,6 +56,7 @@ if not SECRET_KEY and DEBUG:
     SECRET_KEY = "django-insecure-&msg%fm3c=y&7s#fg2#5d1nk$s)rh=tw-yc(c+&+2kk^7rn29t"
 
 ALLOWED_HOSTS = get_env_list("ALLOWED_HOSTS")
+CSRF_TRUSTED_ORIGINS = get_env_list("CSRF_TRUSTED_ORIGINS")
 
 
 # Application definition
@@ -188,6 +189,30 @@ FORM_RENDERER = "django.forms.renderers.TemplatesSetting"
 # Sites
 
 SITE_ID = 1
+
+
+# Static Files
+# https://docs.djangoproject.com/en/4.1/howto/static-files/deployment/
+
+STATIC_ROOT = "/var/www/static"
+
+
+# Logging
+# https://docs.djangoproject.com/en/4.1/topics/logging/
+
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "handlers": {
+        "console": {
+            "class": "logging.StreamHandler",
+        },
+    },
+    "root": {
+        "handlers": ["console"],
+        "level": "WARNING",
+    },
+}
 
 
 # Allauth
